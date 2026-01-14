@@ -6,14 +6,457 @@
     <title>ON/OFF 홈페이지</title>
 
     <style>
+        p {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #logo1 {
+            padding: 0px;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box1 {
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            color: white;
+            justify-content: center; /* 가로 */
+            align-items: center;
+            margin-left: 200px;
+            font-size: large;
+            font-weight: 900;
+        }
+
+        .box2 {
+            padding-right: 40px;
+        }
+
+        #background {
+            width: 100%;
+        }
+
+        #background img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #logo2 {
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .line1 {
+            display: flex;
+            justify-content: center;
+            width: 800px;
+            height: 2px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .line2 {
+            
+            width: 200px;
+            height: 1px;
+            background-color: black;
+        }
+
+        .line3 {
+            display: flex;
+            width: 250px;
+            height: 1px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .memberBox1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .memberBox2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #gallery_member img {
+            background-color: black;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: flex;
+            margin-right: 0;
+        }
+
+        .blue {
+            color: darkcyan;
+            margin-right: 20px;
+        }
+
+        .member_introduction {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .member_introduction1 {
+            font-size: 13px;
+            font-weight: 300;
+            margin-right: 50px;
+
+        }
+
+        .member_introduction2 {
+            font-size: 13px;
+            font-weight: 300;
+            display: flex;
+            
+        }
+
+        .album {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        #album img {
+            margin-right: 100px;
+        }
+
+        #track_list {
+            margin-top: 30px;
+        }
+
+        #putitback {
+            display: flex;
+            align-items: center;
+        }
+
+        #title img {
+            display: flex;
+            justify-content: center;
+        }
+
+        #side_track {
+            display: flex;
+        }
+
+        .side_track {
+            font-size: 13px;
+        }
+
+        #video {
+            margin-top: 40px;
+        }
+
+
+        #PutItBack {
+            display: flex;
+            color: skyblue;
+            padding-right: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        #introduction1 {
+            display: flex;
+            padding-left: 300px;
+            padding-right: 300px;
+            margin: 10px;
+            margin-bottom: 100px;
+            color: skyblue;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        #introduction2 {
+            padding-left: 300px;
+            padding-right: 300px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .introduction3 {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
 
     </style>
-</head>
-<body>
-    
-<div>
-    
-</div>
 
+</head>
+
+<body>
+    <div class="container">
+
+        <div id=logo1>
+                <img src="logo1.png"><br>
+            </div>
+
+        <div id="box1">
+            <div class="box2"><strong>HOME</strong></div>
+            <div class="box2"><strong>PROFILE & GALLERY</strong></div>
+            <div class="box2"><strong>SCHEDULE</strong></div>
+            <div class="box2"><strong>NOTICE</strong></div>
+        </div>
+
+    </div>
+
+        <div id="background">
+                <img src="main_visual.png"><br>
+        </div>
+        
+        <div id="logo2">
+                <img src="logo2.png"><br>
+        </div>
+
+        <h1><strong>PROFILE & GALLERY</strong></h1>
+
+        <div class="line1"></div>
+        
+        <div id="memberBox">
+            <div class="memberBox1">
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_hyojin.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">효진  HYOJIN</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <div class="blue">PART</div>VOCAL</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <P><div class="blue">BIRTHDAY</div>94.04.22</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>O형</p>
+                    </div>
+                </div>
+            
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_etion.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">이션  E-TION</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <p><div class="blue">PART</div>VOCAL</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BIRTHDAY</div>94.12.24</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>B형</p>
+                    </div>
+                </div>
+
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_seungjun.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">승준  SEUNGJUN</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <p><div class="blue">PART</div>VOCAL, DANCE</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BIRTHDAY</div>95.01.13</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>AB형</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memberBox2">
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_wyatt.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">와이엇  WYATT</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <p><div class="blue">PART</div>RAP, DANCE</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BIRTHDAY</div>95.01.23</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>O형</p>
+                    </div>
+                </div>
+
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_mk.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">민균  MINKYUN</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <p><div class="blue">PART</div>VOCAL, RAP</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BIRTHDAY</div>95.11.16</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>AB형</p>
+                    </div>
+                </div>
+
+                <div class="member">
+                        <div id="gallery_member">
+                            <img src="gallery_u.png"><br>
+                        </div>
+                        <div class="member_introduction">
+                            <div class="member_introduction1">유  U</div>
+                            <div class="gallery">
+                                <img src="btn_gallery.png">
+                            </div>
+                        </div>
+
+                        <div class="line2"></div>
+
+                    <div class="member_introduction2">
+                        <p><div class="blue">PART</div>DANCE</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BIRTHDAY</div>99.03.16</p>
+                    </div>
+                    <div class="member_introduction2">
+                        <p><div class="blue">BLOOD TYPE</div>AB형</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1><strong>ALBUM</strong></h1>
+        <div class="line1"></div>
+        <div class="album">
+            <div id="album">
+                <img src="bg_album.png"><br>
+            </div>
+            <div id="TRACK_LIST">
+                <div id="track_list"><strong>TRACK LIST</strong></div>
+                <div class="line3"></div>
+                    <div id="putitback">
+                        <div id="side_track">
+                            <div id="PutItBack">01.  Put It Back</div>
+                                <div id="title">
+                                    <img src="title.png">
+                                </div>
+                        </div>
+                    </div>
+                
+                <div class="side_track">02.  Broken Map</div>
+                <div class="side_track">03.  Moonlight Festa</div>
+                <div class="side_track">04.  New Dawn</div>
+                <div class="side_track">05.  I Found You In Heaven</div>
+                    <div id="video">
+                        <img src="btn_video.png"><br>
+                    </div>
+            </div>
+        </div>
+
+        <div class="introduction">
+            <div id="introduction1">
+            온앤오프의 깨지지 않을 정체성과 의지를 담은 9TH MINI ALBUM [UNBROKEN]<br>
+            모든 것을 원래의 자리로 되돌리겠다는 다짐 ‘Put It Back’
+            </div>
+
+            <div id="introduction2">
+                <div class="introduction3">
+                나를 되찾기 위한 온앤오프(ONF)의 여정이 시작된다.<br>
+                온앤오프가 지난 2월 발매한 정규 2집 Part.1 [ONF:MY IDENTITY] 이후 약 9개월만에 미니9집 앨범 [UNBROKEN]을 선보인다.
+                </div>
+                <div class="introduction3">
+                미니9집 앨범 [UNBROKEN]은 스스로 가치를 창조하는 존재로서 온앤오프의 본질을 되찾기 위한 의지를 담은 앨범이다.
+                </div>
+                <div class="introduction3">
+                왜곡된 현실과 억압에 맞서 본질을 지키고, 누군가의 틀에 맞춰 바뀌는 삶이 아닌 본래의 자리를 되찾아가는 여정, 그 여정의 끝이자 새로운 시작점에서 스스로 길을 개척해 나아가는 진짜 삶의 주인인 나 자신, 온앤오프의 모습을 보여준다.
+                </div>
+                <div class="introduction3">
+                타이틀 곡 ‘Put It Back’은 펑크와 레트로 신스 팝이 결합된 댄스 곡으로, 온앤오프의 탄탄하고 그루브한 보컬이 곡의 독특한 매력을 보여주는 곡이다. 리얼한 베이스 연주와 경쾌한 펑키 일렉 기타가 곡의 에너지를 한층 끌어올려주며, 흔들림 없이 자신을 지키고 나아가겠다는 주체적인 메시지를 담은 곡이다.
+                </div>
+                <div class="introduction3">
+                이외에도 이번 미니9집 앨범 [UNBROKEN]은 타이틀 곡 ‘Put It Back’을 포함 총 5개의 트랙으로 구성되어 있다.
+                </div>
+                <div class="introduction3">
+                파워풀한 랩과 차가운 보컬의 대비가 듣는 재미를 더하는 강렬한 힙합 곡 ‘Broken Map’, 몽환적이면서도 청량한 감성이 돋보이며 온앤오프의 강렬하고 환상적인 에너지를 전하는 곡 ‘Moonlight Festa’, 길었던 어둠을 지나 새로운 시작을 외치는 온앤오프의 단단한 의지가 느껴지는 곡 ‘New Dawn’, 마침내 찾아낸 운명 같은 사랑을 이야기하는 ‘I Found You In Heaven’까지, 그동안의 여정을 함께한 온앤오프와 팬들의 마음을 더욱 공고히 연결시켜주는 의미 있는 앨범이 될 것이다.
+                </div>
+            </div>
+        </div>
+
+
+        
 </body>
 </html>
