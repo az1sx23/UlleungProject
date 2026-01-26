@@ -11,6 +11,11 @@
             font-weight: 300;
         }
 
+        #base_margin {
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -23,12 +28,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         #logo1 {
             padding: 0px;
-            margin: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             justify-content: center;
             align-items: center;
         }
@@ -68,7 +76,7 @@
         .line1 {
             display: flex;
             justify-content: center;
-            width: 910px;
+            width: 800px;
             height: 2px;
             background-color: black;
             margin: 0 auto;
@@ -94,7 +102,7 @@
             justify-content: center;
             width: 910px;
             height: 1px;
-            background-color: darkgray;
+            background-color: rgb(72, 72, 72);
             margin: 0 auto;
             margin-top: 10px;
         }
@@ -128,7 +136,8 @@
 
         .member {
             padding: 10px;
-            margin: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         #gallery_member img {
@@ -170,7 +179,8 @@
         .album {
             display: flex;
             justify-content: center;
-            margin: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         #album img {
@@ -214,18 +224,15 @@
 
         #introduction1 {
             display: flex;
-            padding-left: 300px;
-            padding-right: 300px;
-            margin: 10px;
-            margin-bottom: 100px;
+
+            margin-top: 10px;
+            margin-bottom: 110px;
             color: skyblue;
             font-size: 13px;
             font-weight: 900;
         }
 
         #introduction2 {
-            padding-left: 300px;
-            padding-right: 300px;
             margin-bottom: 30px;
             font-size: 13px;
             font-weight: 500;
@@ -234,7 +241,8 @@
         .introduction3 {
             display: flex;
             align-items: center;
-            margin: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         #days {
@@ -243,8 +251,6 @@
             display: flex;
             justify-content: center;
             margin-top: 50px;
-            margin-left: 300px;
-            margin-right: 300px;
             padding-top: 15px;
             padding-bottom: 15px;
             font-size: 16px;
@@ -252,16 +258,12 @@
 
         #day {
             list-style: none;
-            margin-left: 185px;
-            margin-right: 300px;
             display: flex;
             justify-content: center;
             font-size: 14px;
         }
 
         .day_list {
-            margin-left: 50px;
-            margin-right: 50px;
             color: darkgray;
         }
 
@@ -271,8 +273,6 @@
 
         #number {
             list-style: none;
-            margin-left: 185px;
-            margin-right: 300px;
             display: flex;
             justify-content: center;
             font-size: 14px;
@@ -280,17 +280,16 @@
 
         .number {
             list-style: none;
-            margin-left: 185px;
-            margin-right: 300px;
             display: flex;
-            justify-content: center;
+            justify-content: right;
             font-size: 14px;
         }
 
         .number_list {
-            argin-left: 50px;
-            margin-right: 50px;
             color: darkgray;
+            font-size: 10px;
+            margin-bottom: 10px;
+            margin-right: 90px;
         }
 
         #icon {
@@ -302,7 +301,42 @@
             color: darkgray;
         }
 
+        .notice {
+            color: darkgray;
+            font-size: 12px;
+            display: flex;
+            justify-content: left;
+        }
+
+        .notice1 {
+            margin-right: 20px;
+        }
+
+        .notice2 {
+            margin-right: 20px;
+        }
+
+        .notice3 {
+            margin-right: 20px;
+        }
+
+        .notice4 {
+            margin-right: 20px;
+        }
+
+        .notice5 {
+            margin-right: 20px;
+        }
+
+
         #sns {
+            display: flex;
+            justify-content: center;
+        }
+
+        #sns img {
+            width: 50px;
+            height: 50PX;
             display: flex;
             justify-content: center;
         }
@@ -310,12 +344,12 @@
         #bottom {
             background-color: black;
             display: flex;
+            align-items: center;
         }
 
         #ALL_RIGHT_RESERVED {
             color: white;
             display: flex;
-            justify-content: center;
         }
 
     </style>
@@ -341,7 +375,9 @@
         <div id="background">
                 <img src="main_visual.png"><br>
         </div>
-        
+
+<div id="base_margin">
+
         <div id="logo2">
                 <img src="logo2.png"><br>
         </div>
@@ -584,7 +620,7 @@
             </li>
         </ul>
         <div class="line4"></div>
-        <ul id="number">
+        <ul class="number">
             <li class="number_list">
                 <h7>1</h7>
             </li>
@@ -709,6 +745,8 @@
                 <h7>31</h7>
             </li>
         </ul>
+
+
         <div class="line5"></div>
 
         <div id="icon">
@@ -743,6 +781,52 @@
                 <p class="icon">ETC</p>
         </div>
 
+        <h1><strong>NOTICE</strong></h1>
+
+        <div class="line1"></div>
+
+        <div class="line5"></div>
+
+            <div class="notice">
+                <div class="notice1"><h7>No</h7></div>
+                <div class="notice2"><h7>Subject</h7></div>
+                <div class="notice3"><h7>Nickname</h7></div>
+                <div class="notice4"><h7>Date</h7></div>
+                <div class="notice5"><h7>Hit</h7></div>
+            </div>
+
+        <div class="line5"></div>
+
+            <div class="notice">
+                <div class="notice1"><h7>217</h7></div>
+                <div class="notice2"><h7>온앤오프 (ONF) [LOVE EFFECT] 팬사인회 안내 [MAKESTAR]</h7></div>
+                <div class="notice3"><h7>관리자</h7></div>
+                <div class="notice4"><h7>2023.11.20</h7></div>
+                <div class="notice5"><h7>457</h7></div>
+            </div>
+
+        <div class="line5"></div>
+
+            <div class="notice">
+                    <div class="notice1"><h7>216</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) ONF 2024 SEASON’S GREETINGS [CHESS MATE] 팬사인회 안내 [사운드웨이브]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>105</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>215</h7></div>
+                    <div class="notice2"><h7>온앤오프 (ONF) 7TH MINI ALBUM [LOVE EFFECT] 팬사인회 안내 [점프업이엔티]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>52</h7></div>
+                </div>
+
+
+</div>
         <div id="bottom">
             <div id="sns">
                 <div id="sns_facebook">
@@ -762,11 +846,11 @@
                 </div>
             </div>
 
-            <h5 id="ALL_RIGHT_RESERVED">ⓒ2021 ON7OFF.COM ALL RIGHT RESERVED.</h5>
+            <div><h5 id="ALL_RIGHT_RESERVED">ⓒ2021 ON7OFF.COM ALL RIGHT RESERVED.</h5></div>
 
             <div id="footer_logo">
                     <img src="footer_logo.png"><br>
-                </div>
+            </div>
         </div>
 
 
