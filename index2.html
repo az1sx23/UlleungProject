@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 그리드 컨테이너 설정 */
+        .calendar-grid {
+            display: grid;
+            /* 7개의 컬럼을 균등한 크기로 생성 (월~일) */
+            grid-template-columns: repeat(5, 1fr);
+            width: 910px;
+            /* 기존 line width와 동일하게 설정 */
+            margin: 0 auto;
+        }
+
+        /* 캘린더 셀 (요일 + 날짜 공통) */
+        .cal-item {
+            border-bottom: 0.5px solid darkgray;
+            /* 하단 선 (line5 대체) */
+            padding: 10px;
+            font-size: 14px;
+            color: darkgray;
+        }
+
+        /* 요일 헤더 (SUN, MON...) 스타일 */
+        .cal-header {
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            /* 가운데 정렬 */
+            align-items: center;
+            color: darkgray;
+        }
+
+        /* 날짜 숫자 스타일 */
+        .cal-date {
+            height: 100px;
+            /* 날짜 칸의 높이 (아이콘 공간 확보) */
+        }
+
+
+
+    </style>
+</head>
+<body>
+                    <div class="cal-item cal-header">NO</div>
+                    <div class="cal-item cal-header">Subject</div>
+                    <div class="cal-item cal-header">Nickname</div>
+                    <div class="cal-item cal-header">Date</div>
+                    <div class="cal-item cal-header">Hit</div>
+</body>
+</html>

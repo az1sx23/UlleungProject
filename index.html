@@ -6,21 +6,25 @@
     <title>ON/OFF 홈페이지</title>
 
     <style>
+        /*기본 폰트*/
         p {
             font-size: 13px;
             font-weight: 300;
         }
 
+        /*양 옆 마진*/
         #base_margin {
             margin-left: 400px;
             margin-right: 400px;
         }
 
+        /*기본 마진, 패딩*/
         body {
             margin: 0;
             padding: 0;
         }
 
+        /*네비게이션 바*/
         .container {
             margin: 0px;
             padding: 0px;
@@ -33,6 +37,7 @@
             z-index: 1000;
         }
 
+        /*네비게이션 바 로고*/
         #logo1 {
             padding: 0px;
             margin-top: 10px;
@@ -41,6 +46,7 @@
             align-items: center;
         }
 
+        /*네비게이션 바 메뉴 묶음*/
         #box1 {
             padding: 0px;
             margin: 0px;
@@ -53,26 +59,26 @@
             font-weight: 900;
         }
 
+        /*네비게이션 바 메뉴 각각*/
         .box2 {
             padding-right: 40px;
         }
 
-        #background {
-            width: 100%;
-        }
-
+        /*배경 이미지*/
         #background img {
             width: 100%;
             height: auto;
             display: block;
         }
 
+        /*프로필 위 로고*/
         #logo2 {
             display: flex;
             justify-content: center;
             padding-top: 100px;
         }
 
+        /*메인 메뉴 라인*/
         .line1 {
             display: flex;
             justify-content: center;
@@ -82,13 +88,14 @@
             margin: 0 auto;
         }
 
-        .line2 {
-            
+        /*멤버 프로필 라인*/
+        .line2 {      
             width: 200px;
             height: 1px;
             background-color: black;
         }
 
+        /*앨범 트랙 리스트 밑 라인*/
         .line3 {
             display: flex;
             width: 250px;
@@ -107,6 +114,7 @@
             margin-top: 10px;
         }
 
+        /*NOTICE 라인*/
         .line5 {
             display: flex;
             justify-content: center;
@@ -122,46 +130,54 @@
             justify-content: center;
         }
 
+        /*첫번째 줄 멤버*/
         .memberBox1 {
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        /*두번째 줄 멤버*/
         .memberBox2 {
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        /*멤버 프로필 묶음*/
         .member {
             padding: 10px;
             margin-top: 10px;
             margin-bottom: 10px;
         }
 
+        /*멤버 프로필 이미지*/
         #gallery_member img {
             background-color: black;
             padding: 6px;
             border-radius: 8px;
         }
 
+        /*프로필 이름 옆 갤러리 이미지*/
         .gallery {
             display: flex;
             margin-right: 0;
         }
 
+        /*프로필 메뉴*/
         .blue {
-            color: darkcyan;
+            color: rgb(5, 44, 44);
             margin-right: 20px;
         }
 
+        /*멤버 프로필 이름, 갤러리 이미지 묶음*/
         .member_introduction {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
+        /*멤버 프로필 이름*/
         .member_introduction1 {
             font-size: 13px;
             font-weight: 300;
@@ -169,6 +185,7 @@
 
         }
 
+        /*멤버 프로필 이름 밑 소개 메뉴 각각*/
         .member_introduction2 {
             font-size: 13px;
             font-weight: 300;
@@ -176,6 +193,7 @@
             
         }
 
+        /*앨범 이미지, 트랙리스트 묶음*/
         .album {
             display: flex;
             justify-content: center;
@@ -183,6 +201,7 @@
             margin-bottom: 50px;
         }
 
+        /*앨범 이미지*/
         #album img {
             margin-right: 100px;
         }
@@ -256,56 +275,81 @@
             font-size: 16px;
         }
 
-        #day {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            font-size: 14px;
+/* 그리드 컨테이너 설정 */
+        .calendar-grid {
+            display: grid;
+            /* 7개의 컬럼을 균등한 크기로 생성 (월~일) */
+            grid-template-columns: repeat(7, 1fr);
+            width: 910px;
+            /* 기존 line width와 동일하게 설정 */
+            margin: 0 auto;
         }
 
-        .day_list {
+        /* 캘린더 셀 (요일 + 날짜 공통) */
+        .cal-item {
+            border-bottom: 0.5px solid darkgray;
+            /* 하단 선 (line5 대체) */
+            padding: 10px;
+            font-size: 10px;
             color: darkgray;
         }
 
-        #red_day {
+        /* 요일 헤더 (SUN, MON...) 스타일 */
+        .cal-header {
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            /* 가운데 정렬 */
+            align-items: center;
+            color: darkgray;
+        }
+
+        /* 날짜 숫자 스타일 */
+        .cal-date {
+            height: 100px;
+            /* 날짜 칸의 높이 (아이콘 공간 확보) */
+        }
+
+        .cal-img {
+            display: flex;
+            justify-content: left;
+        }
+
+        /* 일요일 빨간색 처리 */
+        .sun {
             color: crimson;
         }
 
-        #number {
-            list-style: none;
+        /* 아이콘 이미지 스타일 */
+        /* 해도 그만 안해도 그만 */
+        .cal-icon img {
+            margin-top: 5px;
+            /* 이미지 크기 조절이 필요하면 여기에 추가 */
+        }
+        /*스케쥴 달력 밑 글*/
+        .icon {
             display: flex;
-            justify-content: center;
-            font-size: 14px;
+            color: darkgray;
         }
 
-        .number {
-            list-style: none;
+        .icon_ {
+            display: flex;
+            width: 10px;
+            height: 10px;
+        }
+
+        #icon_list {
             display: flex;
             justify-content: right;
-            font-size: 14px;
         }
 
-        .number_list {
-            color: darkgray;
-            font-size: 10px;
-            margin-bottom: 10px;
-            margin-right: 90px;
-        }
-
-        #icon {
-            display: flex;
-            justify-content: end;
-        }
-
-        .icon {
-            color: darkgray;
-        }
 
         .notice {
             color: darkgray;
             font-size: 12px;
             display: flex;
             justify-content: left;
+            padding: 10px;
         }
 
         .notice1 {
@@ -328,23 +372,36 @@
             margin-right: 20px;
         }
 
-
-        #sns {
+        #notice_ {
+            color: darkgray;
             display: flex;
             justify-content: center;
         }
 
-        #sns img {
+
+        #sns {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .sns_ {
             width: 50px;
             height: 50PX;
             display: flex;
             justify-content: center;
         }
 
-        #bottom {
-            background-color: black;
+        /*하단 바 묶음 각각*/
+        .bottom {
             display: flex;
             align-items: center;
+            justify-content: center;
+        }
+
+        /*하단 바*/
+        #bottom-base {
+            background-color: black;
         }
 
         #ALL_RIGHT_RESERVED {
@@ -357,12 +414,14 @@
 </head>
 
 <body>
+
+<!-- 네비게이션 바 -->
     <div class="container">
 
         <div id=logo1>
                 <img src="logo1.png"><br>
             </div>
-
+       
         <div id="box1">
             <div class="box2"><strong>HOME</strong></div>
             <div class="box2"><strong>PROFILE & GALLERY</strong></div>
@@ -372,10 +431,12 @@
 
     </div>
 
+<!-- 배경 이미지 -->
         <div id="background">
                 <img src="main_visual.png"><br>
         </div>
 
+<!-- 양 옆 마진 -->
 <div id="base_margin">
 
         <div id="logo2">
@@ -386,7 +447,9 @@
 
         <div class="line1"></div>
         
+    <!-- 멤버 프로필 -->
         <div id="memberBox">
+            <!-- 멤버 프로필 첫번째줄 -->
             <div class="memberBox1">
                 <div class="member">
                         <div id="gallery_member">
@@ -399,7 +462,7 @@
                             </div>
                         </div>
 
-                        <div class="line2"></div>
+<div class="line2"></div>
 
                     <div class="member_introduction2">
                         <div class="blue">PART</div>VOCAL</p>
@@ -423,7 +486,7 @@
                             </div>
                         </div>
 
-                        <div class="line2"></div>
+<div class="line2"></div>
 
                     <div class="member_introduction2">
                         <p><div class="blue">PART</div>VOCAL</p>
@@ -447,7 +510,7 @@
                             </div>
                         </div>
 
-                        <div class="line2"></div>
+<div class="line2"></div>
 
                     <div class="member_introduction2">
                         <p><div class="blue">PART</div>VOCAL, DANCE</p>
@@ -461,6 +524,7 @@
                 </div>
             </div>
 
+            <!-- 멤버 프로필 두번째줄 -->
             <div class="memberBox2">
                 <div class="member">
                         <div id="gallery_member">
@@ -473,7 +537,7 @@
                             </div>
                         </div>
 
-                        <div class="line2"></div>
+<div class="line2"></div>
 
                     <div class="member_introduction2">
                         <p><div class="blue">PART</div>RAP, DANCE</p>
@@ -536,12 +600,14 @@
             </div>
         </div>
 
+        <!-- 앨범 -->
         <h1><strong>ALBUM</strong></h1>
-        <div class="line1"></div>
+<div class="line1"></div>
         <div class="album">
             <div id="album">
                 <img src="bg_album.png"><br>
             </div>
+
             <div id="TRACK_LIST">
                 <div id="track_list"><strong>TRACK LIST</strong></div>
                 <div class="line3"></div>
@@ -564,11 +630,12 @@
             </div>
         </div>
 
+        <!-- 곡 소개 -->
         <div class="introduction">
             <div id="introduction1">
-            온앤오프의 깨지지 않을 정체성과 의지를 담은 9TH MINI ALBUM [UNBROKEN]<br>
-            모든 것을 원래의 자리로 되돌리겠다는 다짐 ‘Put It Back’
-            </div>
+                온앤오프의 깨지지 않을 정체성과 의지를 담은 9TH MINI ALBUM [UNBROKEN]<br>
+                모든 것을 원래의 자리로 되돌리겠다는 다짐 ‘Put It Back’
+                </div>
 
             <div id="introduction2">
                 <div class="introduction3">
@@ -593,194 +660,127 @@
             </div>
         </div>
 
+            <div id="introduction1">
+                01 Put It Back
+                </div>
+
+        <!-- 스케줄 달력 -->
         <h1><strong>SCHEDULE</strong></h1>
         <div class="line1"></div>
         <h7 id="days">< 2026.01 ></h7>
-        <ul id="day">
-            <li class="day_list">
-                <h7 id="red_day">SUN</h7>
-            </li>
-            <li class="day_list">
-                <h7>MON</h7>
-            </li>
-            <li class="day_list">
-                <h7>TUE</h7>
-            </li>
-            <li class="day_list">
-                <h7>WED</h7>
-            </li>
-            <li class="day_list">
-                <h7>THU</h7>
-            </li>
-            <li class="day_list">
-                <h7>FRI</h7>
-            </li>
-            <li class="day_list">
-                <h7>SAT</h7>
-            </li>
-        </ul>
-        <div class="line4"></div>
-        <ul class="number">
-            <li class="number_list">
-                <h7>1</h7>
-            </li>
-            <li class="number_list">
-                <h7>2</h7>
-            </li>
-            <li class="number_list">
-                <h7>3</h7>
-            </li>
-        </ul>
-        <div class="line5"></div>
-        <ul class="number">
-            <li class="number_list">
-                <h7>4</h7>
-            </li>
-            <li class="number_list">
-                <h7>5</h7>
-            </li>
-            <li class="number_list">
-                <h7>6</h7>
-            </li>
-            <li class="number_list">
-                <h7>7</h7>
-            </li>
-            <li class="number_list">
-                <h7>8</h7>
-            </li>
-            <li class="number_list">
-                <h7>9</h7>
-            </li>
-            <li class="number_list">
-                <h7>10</h7>
-                <div id="icon_concert">
-                        <img src="icon_concert.gif"><br>
-                    </div>
-            </li>
-        </ul>
-        <div class="line5"></div>
-        <ul class="number">
-            <li class="number_list">
-                <h7>11</h7>
-                <div id="icon_concert">
-                        <img src="icon_concert.gif"><br>
-                    </div>
-            </li>
-            <li class="number_list">
-                <h7>12</h7>
-            </li>
-            <li class="number_list">
-                <h7>13</h7>
-            </li>
-            <li class="number_list">
-                <h7>14</h7>
-            </li>
-            <li class="number_list">
-                <h7>15</h7>
-            </li>
-            <li class="number_list">
-                <h7>16</h7>
-            </li>
-            <li class="number_list">
-                <h7>17</h7>
-                <div id="icon_etc">
-                        <img src="icon_etc.gif"><br>
-                    </div>
-            </li>
-        </ul>
-        <div class="line5"></div>
-        <ul class="number">
-            <li class="number_list">
-                <h7>18</h7>
-                <div id="icon_etc">
-                        <img src="icon_etc.gif"><br>
-                    </div>
-            </li>
-            <li class="number_list">
-                <h7>19</h7>
-            </li>
-            <li class="number_list">
-                <h7>20</h7>
-            </li>
-            <li class="number_list">
-                <h7>21</h7>
-            </li>
-            <li class="number_list">
-                <h7>22</h7>
-            </li>
-            <li class="number_list">
-                <h7>23</h7>
-            </li>
-            <li class="number_list">
-                <h7>24</h7>
-                <div id="icon_etc">
-                        <img src="icon_etc.gif"><br>
-                    </div>
-            </li>
-        </ul>
-        <div class="line5"></div>
-        <ul class="number">
-            <li class="number_list">
-                <h7>25</h7>
-                <div id="icon_etc">
-                        <img src="icon_etc.gif"><br>
-                    </div>
-            </li>
-            <li class="number_list">
-                <h7>26</h7>
-            </li>
-            <li class="number_list">
-                <h7>27</h7>
-            </li>
-            <li class="number_list">
-                <h7>28</h7>
-            </li>
-            <li class="number_list">
-                <h7>29</h7>
-            </li>
-            <li class="number_list">
-                <h7>30</h7>
-            </li>
-            <li class="number_list">
-                <h7>31</h7>
-            </li>
-        </ul>
+        <div class="calendar-grid">
+                    <div class="cal-item cal-header sun">SUN</div>
+                    <div class="cal-item cal-header">MON</div>
+                    <div class="cal-item cal-header">TUE</div>
+                    <div class="cal-item cal-header">WED</div>
+                    <div class="cal-item cal-header">THU</div>
+                    <div class="cal-item cal-header">FRI</div>
+                    <div class="cal-item cal-header">SAT</div>
 
+                    <div class="cal-item cal-date"></div>
+                    <div class="cal-item cal-date"></div>
+                    <div class="cal-item cal-date"></div>
+                    <div class="cal-item cal-date"></div>
+                    <div class="cal-item cal-date">1</div>
+                    <div class="cal-item cal-date">2</div>
+                    <div class="cal-item cal-date">3</div>
+                    <div class="cal-item cal-date">4</div>
+                    <div class="cal-item cal-date">5</div>
+                    <div class="cal-item cal-date">6</div>
+                    <div class="cal-item cal-date">7</div>
 
-        <div class="line5"></div>
+                    <div class="cal-item cal-date">8</div>
+                    <div class="cal-item cal-date">9</div>
+                    <div class="cal-item cal-date cal-img">
+                        10
+                        <div class="cal-icon"><img src="icon_concert.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date cal-img">
+                        11
+                        <div class="cal-icon"><img src="icon_concert.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date">12</div>
+                    <div class="cal-item cal-date">13</div>
+                    <div class="cal-item cal-date">14</div>
 
-        <div id="icon">
-            <div id="icon_release">
+                    <div class="cal-item cal-date">15</div>
+                    <div class="cal-item cal-date">16</div>
+                    <div class="cal-item cal-date cal-img">
+                        17
+                        <div class="cal-icon"><img src="icon_etc.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date cal-img">
+                        18
+                        <div class="cal-icon"><img src="icon_etc.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date">19</div>
+                    <div class="cal-item cal-date">20</div>
+                    <div class="cal-item cal-date">21</div>
+
+                    <div class="cal-item cal-date">22</div>
+                    <div class="cal-item cal-date">23</div>
+                    <div class="cal-item cal-date cal-img">
+                        24
+                        <div class="cal-icon"><img src="icon_etc.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date cal-img">
+                        25
+                        <div class="cal-icon"><img src="icon_etc.gif"></div>
+                    </div>
+                    <div class="cal-item cal-date">26</div>
+                    <div class="cal-item cal-date">27</div>
+                    <div class="cal-item cal-date">28</div>
+
+                    <div class="cal-item cal-date">29</div>
+                    <div class="cal-item cal-date">30</div>
+                    <div class="cal-item cal-date">31</div>
+                    
+                </div>
+    <div id="icon_list">
+        <div class="icon">
+            <div clss="icon_">
                 <img src="icon_release.gif"><br>
             </div>
-                <p class="icon">Release</p>
-
-            <div id="icon_magazine">
-                <img src="icon_magazine.gif"><br>
-            </div>
-                <p class="icon">Magazine</p>
-
-            <div id="icon_tv">
-                <img src="icon_tv.gif"><br>
-            </div>
-                <p class="icon">TV</p>
-
-            <div id="icon_radio">
-                <img src="icon_radio.gif"><br>
-            </div>
-                <p class="icon">Radio</p>
-
-            <div id="icon_concert">
-                <img src="icon_concert.gif"><br>
-            </div>
-                <p class="icon">Concert</p>
-
-            <div id="icon_etc">
-                <img src="icon_etc.gif"><br>
-            </div>
-                <p class="icon">ETC</p>
+            <p class="icon">Release</p>
         </div>
 
+        <div class="icon">
+            <div class="icon_">
+                <img src="icon_magazine.gif"><br>
+            </div>
+            <p class="icon">Magazine</p>
+        </div>
+
+        <div class="icon">
+            <div class="icon_">
+                <img src="icon_tv.gif"><br>
+            </div>
+            <p class="icon">TV</p>
+        </div>
+
+        <div class="icon">
+            <div class="icon_">
+                <img src="icon_radio.gif"><br>
+            </div>
+            <p class="icon">Radio</p>
+        </div>
+
+        <div class="icon"></div>
+            <div class="icon_">
+                <img src="icon_concert.gif"><br>
+            </div>
+            <p class="icon">Concert</p>
+        </div>
+
+        <div class="icon"></div>
+            <div class="icon_">
+                <img src="icon_etc.gif"><br>
+            </div>
+            <p class="icon">ETC</p>
+        </div>
+    </div>
+
+        <!-- 고지사항 -->
         <h1><strong>NOTICE</strong></h1>
 
         <div class="line1"></div>
@@ -825,31 +825,114 @@
                     <div class="notice5"><h7>52</h7></div>
                 </div>
 
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>214</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) 7TH MINI ALBUM [LOVE EFFECT] 공식 MD 온라인 예약 판매 안내</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>84</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>213</h7></div>
+                    <div class="notice2"><h7>온앤오프 (ONF) 7TH MINI ALBUM [LOVE EFFECT] 팬사인회 안내 [점프업이엔티]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>28</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>212</h7></div>
+                    <div class="notice2"><h7>온앤오프 (ONF) 7TH MINI ALBUM [LOVE EFFECT] 팬사인회 안내 [MAKESTAR]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>25</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>211</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) 7TH MINI ALBUM [LOVE EFFECT] VIDEO CALL EVENT 안내 [점프업이엔티]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.11.14</h7></div>
+                    <div class="notice5"><h7>16</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>210</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) 7TH MINI ALBUM [LOVE EFFECT] 대면 팬사인회 안내 [뮤직아트]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.10.25</h7></div>
+                    <div class="notice5"><h7>76</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>209</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) 2024 SEASON’S GREETINGS [CHESSMATE] 온라인 예약 판매 안내</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.10.24</h7></div>
+                    <div class="notice5"><h7>41</h7></div>
+                </div>
+
+        <div class="line5"></div>
+
+                <div class="notice">
+                    <div class="notice1"><h7>208</h7></div>
+                    <div class="notice2"><h7>온앤오프(ONF) 7TH MINI ALBUM [LOVE EFFECT] 팬사인회 안내 [애플뮤직]</h7></div>
+                    <div class="notice3"><h7>관리자</h7></div>
+                    <div class="notice4"><h7>2023.10.24</h7></div>
+                    <div class="notice5"><h7>35</h7></div>
+                </div>
+
+        <P id="notice_">< <strong>1</strong> 2 3 4 5 6 7 8 9 10 ></P>
 
 </div>
-        <div id="bottom">
-            <div id="sns">
-                <div id="sns_facebook">
-                    <img src="sns_facebook.png"><br>
-                </div>
-                <div id="sns_x">
-                    <img src="sns_x.png"><br>
-                </div>
-                <div id="sns_daum">
-                    <img src="sns_daum.png"><br>
-                </div>
-                <div id="sns_instagram">
-                    <img src="sns_instagram.png"><br>
-                </div>
-                <div id="sns_wm">
-                    <img src="sns_wm.png"><br>
-                </div>
+
+        <!-- 하단 바 -->
+
+        <div id="bottom-base">
+            <div class="bottom">
+                    <!--SNS-->
+                    <div id="sns">
+                        <div class="sns_">
+                            <img src="sns_facebook.png"><br>
+                        </div>
+                        <div class="sns_">
+                            <img src="sns_x.png"><br>
+                        </div>
+                        <div class="sns_">
+                            <img src="sns_daum.png"><br>
+                        </div>
+                        <div class="sns_">
+                            <img src="sns_instagram.png"><br>
+                        </div>
+                        <div class="sns_">
+                            <img src="sns_wm.png"><br>
+                        </div>
+                    </div>
             </div>
 
-            <div><h5 id="ALL_RIGHT_RESERVED">ⓒ2021 ON7OFF.COM ALL RIGHT RESERVED.</h5></div>
+                <!---->
+            <div class="bottom">
+                <div><h5 id="ALL_RIGHT_RESERVED">ⓒ2021 ON7OFF.COM ALL RIGHT RESERVED.</h5></div>
+            </div>
 
-            <div id="footer_logo">
-                    <img src="footer_logo.png"><br>
+                <!---->
+            <div class="bottom">
+                <div id="footer_logo">
+                        <img src="footer_logo.png"><br>
+                </div>
             </div>
         </div>
 
